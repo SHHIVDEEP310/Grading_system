@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGradePro - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        
+        <div class="sidebar" id="sidebar">
+            <h2>Settings</h2>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Change Password</a></li>
+                <li><a href="index.html" class="sidebar-link">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Dashboard</h1>
+            
+            <h2>Upload Answer Key</h2>
+            <input type="file" id="answerKeyInput" class="file-input" required>
+            <button class="btn upload-btn" onclick="uploadAnswerKey()">Upload Answer Key</button>
+            <p id="answerKeyStatus"></p>
+
+            <h2>Upload Student Answer</h2>
+            <input type="text" id="studentName" class="input-field" placeholder="Enter Student Name" required>
+            <input type="file" id="fileInput" class="file-input" required>
+            <button class="btn upload-btn" onclick="processFile()">Upload & Check Grade</button>
+
+            <!-- ✅ Result Display Section -->
+            <div id="resultContainer" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                <h2>Grading Results</h2>
+                <div id="resultDisplay"></div>
+                <button class="btn clear-btn" onclick="clearResults()">Clear Results</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

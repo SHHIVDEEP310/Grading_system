@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGradePro - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="title">AutoGradePro</h1>
+        <p class="subtitle">Your automatic grading assistant</p>
+        <input type="text" id="username" class="input-field" placeholder="Username" required>
+        <input type="password" id="password" class="input-field" placeholder="Password" required>
+        <button class="btn login-btn" onclick="loginUser ()">Login</button>
+        <button class="btn signup-btn" onclick="registerUser ()">Sign Up</button>
+        <p id="authStatus" class="status-message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

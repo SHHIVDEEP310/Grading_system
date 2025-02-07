@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGradePro - Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="results-container">
+        <h1>Grading Results</h1>
+        <div id="results"></div>
+        <button onclick="goBack()">Back to Dashboard</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'dashboard.html';
+        }
+
+        // Function to display results
+        function displayResults(data) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = data;
+        }
+
+        // Fetch the result data from the server (assuming it will be passed as query parameter)
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultData = urlParams.get('resultData');
+        if (resultData) {
+            displayResults(decodeURIComponent(resultData));
+        }
+    </script>
+</body>
+</html>
